@@ -217,6 +217,7 @@ function ContactSection() {
       <div className="contact-actions">
         <a href={profile.github} target="_blank" rel="noreferrer">GITHUB <ChevronRight size={15} /></a>
         <a href={profile.linkedin} target="_blank" rel="noreferrer">LINKEDIN <ChevronRight size={15} /></a>
+        <a href={profile.email} target="_blank" rel="noreferrer">EMAIL <ChevronRight size={15} /></a>
       </div>
     </section>
   );

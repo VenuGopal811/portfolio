@@ -21,6 +21,7 @@ export const navigation: NavigationItem[] = [
 
 export const profile = {
   name: "Venu Gopal",
+  email: "mailto:imvenugopal08@gmail.com",
   role: "B.Tech CSE (AI & ML) student building agentic AI systems and software",
   intro: "I build agentic AI workflows, backend systems, and software that connects ideas to working implementations.",
   note: "Currently studying Computer Science and Engineering (AI & ML) at GLA University, Mathura. Interested in agentic workflows, machine learning, full-stack systems, and embedded projects.",
