@@ -212,7 +212,6 @@ function ContactSection() {
           <div><span className="section-number">03 /</span><h2 id="contact-title">Contact</h2></div>
           <span className="section-meta">OPEN CHANNELS</span>
         </div>
-        <p className="section-intro">Connect through the public profiles below.</p>
       </div>
       <div className="contact-actions">
         <a href={profile.github} target="_blank" rel="noreferrer">GITHUB <ChevronRight size={15} /></a>
