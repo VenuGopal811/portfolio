@@ -176,7 +176,6 @@ function ProjectDirectory() {
     <span className="inspector-meta">{selectedProject.category}{selectedProject.screenshots.length > 0 ? ` · ${selectedProject.screenshots.length} IMAGES` : ""} · {selectedProject.verified ? "VERIFIED" : "UNVERIFIED SOURCE"}</span>
   </aside>
   <ProjectGallery key={selectedProject.id} project={selectedProject} />
-  <p className="asset-note"><span className="asset-dot" /> HOVER OR FOCUS A ROW TO PREVIEW · SELECT TO PIN · CLICK AN IMAGE TO ENLARGE</p><span className="asset-dot" /> HOVER, FOCUS, OR TAP A ROW TO PREVIEW · SELECTED PROJECT PERSISTS ON THIS DEVICE · SCREENSHOTS NOT SUPPLIED
     </section>
   );
 }
