@@ -42,3 +42,23 @@
 }
 
 .architecture-node:focus-visible,.project-row:focus-visible{outline:2px solid var(--green);outline-offset:3px;box-shadow:0 0 0 5px #10b98122}
+.project-gallery{margin-top:18px}
+.gallery-strip{list-style:none;margin:0;padding:0;display:flex;gap:8px;height:clamp(130px,20vw,220px)}
+.gallery-item{flex:1 1 0;min-width:0;transition:flex-grow .45s cubic-bezier(.2,.7,.2,1)}
+.gallery-item.is-active{flex-grow:3.4}
+.gallery-thumb{position:relative;display:block;width:100%;height:100%;padding:0;overflow:hidden;border:1px solid var(--line);background:var(--surface);cursor:zoom-in}
+.gallery-thumb img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.6) brightness(.7);transition:filter .35s,transform .6s}
+.gallery-item.is-active .gallery-thumb{border-color:var(--green)}
+.gallery-item.is-active .gallery-thumb img{filter:none;transform:scale(1.03)}
+.gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;text-align:left;font:9px var(--mono);letter-spacing:.08em;color:var(--text);background:linear-gradient(transparent,#08090ce6);opacity:0;transition:opacity .3s}
+.gallery-item.is-active .gallery-caption{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:30;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;padding:5vh 3vw;background:#08090cf2}
+.lightbox figure{margin:0;display:grid;justify-items:center;gap:14px;min-width:0;grid-column:2}
+.lightbox figure img{max-width:100%;max-height:78vh;object-fit:contain;border:1px solid var(--line)}
+.lightbox figcaption{font:10px var(--mono);letter-spacing:.08em;color:var(--muted);text-align:center}
+.lightbox-close{position:absolute;top:20px;right:20px;padding:10px;color:var(--muted)}
+.lightbox-close:hover,.lightbox-nav:hover{color:var(--green)}
+.lightbox-nav{padding:12px;color:var(--text);border:1px solid var(--line);background:#12151ecc}
+.lightbox-nav.is-prev{grid-column:1}
+.lightbox-nav.is-next{grid-column:3}
+@media(max-width:700px){.gallery-strip{height:130px;gap:6px}.lightbox{padding:8vh 2vw;gap:6px}.lightbox-nav{padding:8px}}

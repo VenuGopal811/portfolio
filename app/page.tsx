@@ -8,6 +8,7 @@ import {
   projects,
   type Project,
 } from "../data/portfolio";
+  import ProjectGallery from "./ProjectGallery";
 
 const startupLines = ["CHECKING INTERFACE", "LOADING WORKSPACE", "READY"];
 
@@ -166,17 +167,16 @@ function ProjectDirectory() {
           </button>
         ))}
       </div>
-      <aside className="project-inspector" aria-live="polite" aria-label="Selected project inspector">
-        <div className="inspector-heading">
-          <span className="inspector-label">SELECTED PREVIEW</span>
-          <strong>{selectedProject.name}</strong>
-        </div>
-        <p>{selectedProject.summary}</p>
-        <span className="inspector-meta">{selectedProject.category} · {selectedProject.screenshots.length} SUPPLIED ASSET · {selectedProject.verified ? "VERIFIED" : "UNVERIFIED SOURCE"}</span>
-        <span>{previewProject.id === selectedProject.id ? "PINNED IN INSPECTOR" : `PREVIEWING ${previewProject.name.toUpperCase()}`}</span>
-        <span className="inspector-status"><i /> {selectedProject.screenshots.length === 0 || failedImages[previewPath] ? "NO SCREENSHOT / FALLBACK ACTIVE" : "AMBIENT LAYER READY"}</span>
-      </aside>
-      <p className="asset-note"><span className="asset-dot" /> HOVER, FOCUS, OR TAP A ROW TO PREVIEW · SELECTED PROJECT PERSISTS ON THIS DEVICE · SCREENSHOTS NOT SUPPLIED</p>
+        <aside className="project-inspector" aria-live="polite" aria-label="Selected project inspector">
+    <div className="inspector-heading">
+      <span className="inspector-label">SELECTED PROJECT</span>
+      <strong>{selectedProject.name}</strong>
+    </div>
+    <p>{selectedProject.summary}</p>
+    <span className="inspector-meta">{selectedProject.category}{selectedProject.screenshots.length > 0 ? ` · ${selectedProject.screenshots.length} IMAGES` : ""} · {selectedProject.verified ? "VERIFIED" : "UNVERIFIED SOURCE"}</span>
+  </aside>
+  <ProjectGallery key={selectedProject.id} project={selectedProject} />
+  <p className="asset-note"><span className="asset-dot" /> HOVER OR FOCUS A ROW TO PREVIEW · SELECT TO PIN · CLICK AN IMAGE TO ENLARGE</p><span className="asset-dot" /> HOVER, FOCUS, OR TAP A ROW TO PREVIEW · SELECTED PROJECT PERSISTS ON THIS DEVICE · SCREENSHOTS NOT SUPPLIED
     </section>
   );
 }
