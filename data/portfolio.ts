@@ -59,7 +59,9 @@ export const projects: Project[] = [
     name: "LabFlow",
     summary: "Django-based laboratory management system for pathology and X-ray diagnostic workflows.",
     category: "FULL-STACK / HEALTHCARE WORKFLOW",
-    screenshots: [],
+    screenshots: [
+     { path: "/projects/labflow/", alt: "LabFlow dashboard" },
+    ],
     verified: true,
   },
   {

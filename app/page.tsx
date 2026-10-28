@@ -8,7 +8,8 @@ import {
   projects,
   type Project,
 } from "../data/portfolio";
-  import ProjectGallery from "./ProjectGallery";
+import ProjectGallery from "./ProjectGallery";
+import { Analytics } from "@vercel/analytics/next"
 
 const startupLines = ["CHECKING INTERFACE", "LOADING WORKSPACE", "READY"];
 
